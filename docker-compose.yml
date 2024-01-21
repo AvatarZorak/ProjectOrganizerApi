@@ -1,0 +1,43 @@
+version: 2.0.1
+
+services:
+  
+  database:
+    
+    image: mongo:latest
+    
+    ports: 
+      - 27017:27017
+    
+    container_name: Mongo_Database
+    
+    volumes:
+      - project-organizer-database:/data/db
+
+    networks:
+      - app-network
+
+  spring_api:
+    depends_on:
+      - database
+
+    image: openjdk:17-jdk-alpine
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+      
+    ports: 
+      - 8080:8080
+
+    container_name: API
+
+    networks:
+      - app-network
+
+volumes:
+  project-organizer-database:
+
+networks:
+  app-network: 
+      driver: bridge
