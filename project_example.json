@@ -1,0 +1,38 @@
+{
+    "_id": "Object id of mongodb document.",
+    "name": "Project",
+    "description": "This is a project",
+    "epics": [
+        {
+            "name": "Epic-1",
+            "description": "This is epic no. 1.",
+            "status": "in_progress",
+            "features": [
+                {
+                    "name": "Feature-1",
+                    "description": "This is feature no. 1.",
+                    "status": "in_progress",
+                    "userStories": [
+                        {
+                            "name": "UserStory-1",
+                            "description": "This is user story no. 1.",
+                            "status": "in_progress",
+                            "tasks": [
+                                {
+                                    "name": "Task-1",
+                                    "description": "This is task no. 1.",
+                                    "status": "done"
+                                },
+                                {
+                                    "name": "Task-2",
+                                    "description": "This is task no.2",
+                                    "status": "in_progress"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
